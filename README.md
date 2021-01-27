@@ -1,3 +1,5 @@
+[![angular-5-PDF-viewer-banner](https://user-images.githubusercontent.com/3748453/89762181-325a3400-daf0-11ea-8b02-f4be5458d416.png)](https://xscode.com/vadimdez/ng2-pdf-viewer)
+
 <h1 align="center">Angular 5+ PDF Viewer</h1>
 <p align="center">
   <a href="https://www.npmjs.com/package/ng2-pdf-viewer">
@@ -14,9 +16,6 @@
   </a>
   <a href="https://gitter.im/ngx-pdf-viewer/Lobby" title="Gitter">
     <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg" alt="Gitter"/>
-  </a>
-  <a href="https://greenkeeper.io/" title="Greenkeeper">
-    <img src="https://badges.greenkeeper.io/VadimDez/ng2-pdf-viewer.svg" alt="Greenkeeper badge"/>
   </a>
   <a href="https://www.paypal.me/vadimdez" title="Donate to this project using Paypal">
     <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" />
@@ -161,7 +160,7 @@ supports two way data binding as well
 [(page)]="pageVariable"
 ```
 
-If you want that the `two way data binding` actually updates your `page` variable on page change/scroll - you have to be sure that you define the hight of the container, for example:
+If you want that the `two way data binding` actually updates your `page` variable on page change/scroll - you have to be sure that you define the height of the container, for example:
 ```
 pdf-viewer {
     display: block;
@@ -490,7 +489,7 @@ By default the `worker` is loaded from `cdnjs.cloudflare.com`.
 
 In your code update `path` to the worker to be for example `/pdf.worker.js` 
 ```typescript
-(<any>window).pdfWorkerSrc = '/pdf.worker.js';
+(window as any).pdfWorkerSrc = '/pdf.worker.js';
 ```
 *This should be set before `pdf-viewer` component is rendered.*
 
